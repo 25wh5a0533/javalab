@@ -1,0 +1,37 @@
+package Com.dhana533;
+class Parameterized_constructor {
+    String Name;
+    String section;
+    int rollNo;
+    Parameterized_constructor(){
+        System.out.println("Default Constructor"); // Default constructor with no parameters
+    }
+    Parameterized_constructor(String Name){
+            System.out.println("Name:" +Name); // One parameterized constructor
+    }
+    Parameterized_constructor(String Name,String section){
+        System.out.println("Name:" +Name + " ,Section:" +section); // Two parameterized constructor
+        
+    }
+    Parametarized_constructor(String Name,String section,int rollNo){
+        System.out.println("Name:" +Name + ",Section:"+section + ",Roll_No:" +rollNo); // Three parameterized constructor
+        
+    }
+}
+
+public class MainClass {
+
+    public static void main(String[] args) {
+        Parametarized_constructor con = new Parametarized_constructor();  //no parameters
+        Parametarized_constructor pcon1 = new Parametarized_constructor("dhanalaxmi");  //one parameter
+        Parametarized_constructor pcon2 = new Parametarized_constructor("dhanalaxmi","CSE-E");  //two parameters
+        Parametarized_constructor pcon3 = new Parametarized_constructor("dhanalaxmi","CSE-E",533);  //three parameters
+    }
+}
+
+
+OUTPUT:
+Default Constructor
+Name: dhanalaxmi
+Name: dhanalaxmi ,Section: CSE-E
+Name: dhanalaxmi ,Section: CSE-E ,Roll_No:533
