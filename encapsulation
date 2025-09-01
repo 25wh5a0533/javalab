@@ -1,0 +1,48 @@
+package Com.dhana533;
+public class bankacc {
+    private String accHolderName;
+    private double balance = 300;
+
+    // Setter method for account holder name
+    public void setAccHolderName(String name) {
+        accHolderName = name;
+    }
+
+    // Getter method for account holder name
+    public String getAccHolderName() {
+        return accHolderName;
+    }
+
+    // Method to deposit money
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Deposit successful");
+        } else {
+            System.out.println("Invalid deposit amount:"+amount);
+        }
+    }
+
+    // Getter method for balance
+    public double getBalance() {
+        return balance;
+    }
+
+    // Main method to test the class
+    public static void main(String[] args) {
+        bankacc acc = new bankacc2();
+
+        acc.setAccHolderName("dhanalaxmi");
+        acc.deposit(700);
+        acc.deposit(-500);  // invalid deposit test
+
+        System.out.println("Account holder Name: " + acc.getAccHolderName());
+        System.out.println("Balance in account: " + acc.getBalance());
+    }
+}
+
+OUTPUT:
+Deposit successful
+Invalid deposit amount:-500.0
+Account holder Name: dhanalaxmi
+Balance in account: 1000.0
