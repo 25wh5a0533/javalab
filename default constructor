@@ -1,4 +1,4 @@
-package java.com;
+package Com.dhana533;
 class Student
 {
 	String name = "dhanalaxmi";   
