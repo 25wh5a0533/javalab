@@ -1,0 +1,48 @@
+package javalab;
+
+// Base class
+class RBI {
+	public double calculateInterest(double amount) {
+		double rate = 5.0;
+		return (amount * rate) / 100;
+	}
+}
+
+// SBI class
+class SBI extends RBI {
+	@Override
+	public double calculateInterest(double amount) {
+		double rate = 6.5;
+		return (amount * rate) / 100;
+	}
+}
+
+// ICICI class
+class ICICI extends RBI {
+	@Override
+	public double calculateInterest(double amount) {
+		double rate = 7.5;
+		return (amount * rate) / 100;
+	}
+}
+
+// Main class
+class Bank {
+	public static void main(String[] args) {
+		double amount = 100000;
+
+		RBI rb = new RBI();
+		SBI sbi = new SBI();
+		ICICI ic = new ICICI();
+		RBI rb2 = new SBI(); // Upcasting
+		System.out.println("RBI Interest for " + amount + ":" + rb.calculateInterest(amount));
+		System.out.println("SBI Interest for " + amount + ":" + sbi.calculateInterest(amount));
+		System.out.println("ICICI Interest for " + amount + ":" + ic.calculateInterest(amount));
+		System.out.println("New SBI (rb2) Interest: " + rb2.calculateInterest(amount));
+	}
+}
+OUTPUT
+RBI Interest for 100000.0: 5000.0
+SBI Interest for 100000.0: 6500.0
+ICICI Interest for 100000.0: 7500.0
+New SBI (rb2) Interest: 6500.0
