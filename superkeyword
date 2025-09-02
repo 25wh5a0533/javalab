@@ -1,0 +1,30 @@
+package javalab;
+
+class GP {
+	GP() {
+	super();
+	System.out.println("GP class");
+	}
+}
+class P extends GP {
+	P() {
+	super();
+	System.out.println("P class");
+	}
+}
+class C extends P {
+	C() {
+	super();
+	System.out.println("C class");
+	}
+}
+public class MainSuperKeywd {
+
+	public static void main(String[] args) {
+		C c1=new C();
+	}
+}
+OUTPUT
+GP class
+P class
+C class
