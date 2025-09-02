@@ -1,0 +1,41 @@
+package javalab;
+class RBI {
+	public double getRateOfInterest() {
+		return 5.0;
+	}
+}
+class SBI extends RBI {
+	@Override
+ public double getRateOfInterest() {
+		return 6.5;
+	}
+	public void sbiSpecialFeature() {
+		System.out.println("zero balance account");
+	}
+}
+class ICICI extends RBI {
+	@Override
+	public double getRateOfInterest() {
+		return 7.5;
+	}
+}
+class Bank {
+	public static void main(String[] args) {
+		RBI rb=new RBI();
+		SBI sbi=new SBI();		
+        ICICI ic=new ICICI();
+        RBI rb2=new SBI();//parent creating object for child class called upcasting
+        System.out.println("RBI rate of interest:"+rb.getRateOfInterest());
+        System.out.println("SBI rate of interest:"+sbi.getRateOfInterest());
+        System.out.println("ICICI rate of interest:"+ic.getRateOfInterest());
+        System.out.println("new SBI rate of interest:"+rb2.getRateOfInterest());
+        //rb2.sbiSpecialFeature();error for method undefined in rbi
+        sbi.sbiSpecialFeature();
+	}
+}
+output
+RBI rate of interest:5.0
+SBI rate of interest:6.5
+ICICI rate of interest:7.5
+new SBI rate of interest:6.5
+zero balance account
