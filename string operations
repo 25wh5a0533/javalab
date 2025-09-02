@@ -1,0 +1,50 @@
+package Com.dhana533;
+public class StringOperations {
+    public static void main(String[] args) {
+        // Declare strings
+        String str1 = new String("HELLO");
+        char[] arr = {'h', 'e', 'l', 'l', 'o'}; 
+        String str2 = new String(arr); // "hello"
+
+        // 1. Convert to lowercase
+        System.out.println("Lowercase of str1: " + str1.toLowerCase());
+
+        // 2. Convert to uppercase
+        System.out.println("Uppercase of str2: " + str2.toUpperCase());
+
+        // 3. Length of strings
+        System.out.println("Length of str1: " + str1.length());
+        System.out.println("Length of str2: " + str2.length());
+
+        // 4. Reverse a string
+        String reversedStr1 = new StringBuilder(str1).reverse().toString();
+        System.out.println("Reversed str1: " + reversedStr1);
+
+        // 5. Replace characters
+        System.out.println("Replaced 'o' with '@' in str2: " + str2.replace('o', '@'));
+
+        // 6. Concatenation
+        System.out.println("Concatenated string: " + str1.concat(str2));
+
+        // 7. Compare two strings
+        System.out.println("Comparing strings: " + str1.compareTo(str2)); // lexicographical comparison
+
+        // 8. Slicing (substring)
+        System.out.println("Sliced str1 (index 1 to 3): " + str1.substring(1, 4)); // "ELL"
+
+        // 9. Indexing (position of character)
+        System.out.println("Index of 'L' in str1: " + str1.indexOf('L')); // Case-sensitive
+    }
+}
+OUTPUT
+Lowercase of str1: hello
+Uppercase of str2: HELLO
+Length of str1: 5
+Length of str2: 5
+Reversed str1: OLLEH
+Replaced 'o' with '@' in str2: hell@
+Concatenated string: HELLOhello
+Comparing strings: -32
+Sliced str1 (index 1 to 3): ELL
+Index of 'L' in str1: 2
+
